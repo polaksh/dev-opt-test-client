@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).keypress(function () {
+      if (event.which == 13) {
+        sendMe();
+      }
+    });
+
+    $(document).ready(function () {
+      $("button").click(function () {
+        sendMe();
+      });
+    });
+
+    function sendMe() {
+      var name = $('#txt_name').val();
+      $.get("http://localhost:9090/greeting?name=" + name, function (data, status) {
+        alert(data.content);
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <style>
+    body {
+      background-image: url("images/photo.jpg");
+    }
+  </style>
+  <input type="text" id="txt_name" />
+  <br>
+  <button>Say Hello</button>
+</body>
+
+</html>
