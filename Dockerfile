@@ -1,2 +1,2 @@
-FROM openjdk:8-jdk
-ADD ./dist /
+FROM nginx:alpine
+ADD dist /usr/share/nginx/html
