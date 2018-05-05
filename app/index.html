@@ -18,7 +18,7 @@
 
     function sendMe() {
       var name = $('#txt_name').val();
-      $.get("http://server/greeting?name=" + name, function (data, status) {
+      $.get("http://35.225.90.129/greeting?name=" + name, function (data, status) {
         alert(data.content);
       });
     }
