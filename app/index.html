@@ -18,7 +18,7 @@
 
     function sendMe() {
       var name = $('#txt_name').val();
-      $.get("http://localhost:9090/greeting?name=" + name, function (data, status) {
+      $.get("http://server-side/greeting?name=" + name, function (data, status) {
         alert(data.content);
       });
     }
